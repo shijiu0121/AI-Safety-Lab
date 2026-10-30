@@ -1,0 +1,15 @@
+{
+  "dataset": "cifar10",
+  "data_dir": "./data/datasets",
+  "output_dir": "./data/training/cifar10-at-bsl",
+  "architecture": "cifar_resnet18",
+  "method": "at_bsl",
+  "imbalance_ratio": 10,
+  "augmentation": "randaugment",
+  "epochs": 100,
+  "batch_size": 128,
+  "epsilon_255": 8,
+  "attack_steps": 10,
+  "step_size_255": 2,
+  "validation_steps": 20
+}

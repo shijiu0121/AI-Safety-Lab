@@ -1,0 +1,6 @@
+{
+  "dataset": "cifar10",
+  "method": "distill_teacher",
+  "temperature": 20,
+  "output_dir": "./data/training/cifar10-teacher"
+}

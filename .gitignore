@@ -1,0 +1,16 @@
+.venv/
+node_modules/
+dist/
+data/
+.npm-cache/
+__pycache__/
+*.pyc
+*.log
+.env
+
+aegis-test-*/
+.change-backups/
+.package-cache/
+build/
+*.egg-info/
+packages/

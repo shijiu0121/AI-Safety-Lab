@@ -1,0 +1,53 @@
+{
+  "training_runs": [
+    {
+      "id": "erm",
+      "config": "cifar10-erm.json"
+    },
+    {
+      "id": "pgd-at",
+      "config": "cifar10-pgd.json"
+    },
+    {
+      "id": "trades",
+      "config": "cifar10-trades.json"
+    },
+    {
+      "id": "teacher",
+      "config": "cifar10-teacher.json"
+    },
+    {
+      "id": "student",
+      "config": "cifar10-student.json",
+      "teacher_run_id": "teacher"
+    }
+  ],
+  "defenses": [
+    {
+      "name": "中值滤波＋一致性检测",
+      "model_ids": [
+        "pgd-at"
+      ],
+      "transforms": [
+        {
+          "kind": "median",
+          "kernel": 3
+        }
+      ],
+      "detector": {
+        "method": "consistency"
+      }
+    },
+    {
+      "name": "ERM / PGD 软投票＋熵检测",
+      "model_ids": [
+        "erm",
+        "pgd-at"
+      ],
+      "aggregation": "soft_vote",
+      "detector": {
+        "method": "entropy"
+      }
+    }
+  ]
+}

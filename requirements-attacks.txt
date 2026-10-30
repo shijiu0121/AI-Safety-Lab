@@ -1,0 +1,5 @@
+-r requirements.txt
+foolbox==3.3.4
+autoattack @ https://github.com/fra31/auto-attack/archive/a39220048b3c9f2cca9a4d3a54604793c68eca7e.zip
+eagerpy==0.30.0
+scipy>=1.10,<2

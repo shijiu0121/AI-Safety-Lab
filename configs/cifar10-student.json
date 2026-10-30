@@ -1,0 +1,8 @@
+{
+  "dataset": "cifar10",
+  "method": "distill",
+  "temperature": 20,
+  "distill_alpha": 0,
+  "teacher_model_file": "./data/training/cifar10-teacher/model_registration.json",
+  "output_dir": "./data/training/cifar10-student"
+}

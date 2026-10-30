@@ -1,0 +1,10 @@
+{
+  "dataset": "cifar10",
+  "output_dir": "./data/training/cifar10-erm",
+  "architecture": "cifar_resnet18",
+  "method": "erm",
+  "epochs": 100,
+  "batch_size": 128,
+  "download": false,
+  "seed": 0
+}

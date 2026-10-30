@@ -1,0 +1,11 @@
+{
+  "dataset": "cifar10",
+  "output_dir": "./data/training/cifar10-trades",
+  "architecture": "cifar_resnet18",
+  "method": "trades",
+  "trades_beta": 6.0,
+  "epochs": 100,
+  "batch_size": 128,
+  "download": false,
+  "seed": 0
+}

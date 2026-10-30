@@ -1,0 +1,38 @@
+{
+  "experiment": {
+    "dataset_id": "cifar10-test",
+    "model_ids": ["cifar10-pgd-at"],
+    "attacks": ["pgd20", "pgd100", "cw_linf", "autoattack", "deepfool_linf"],
+    "linf_budgets_255": [8],
+    "l2_budgets": [0.5],
+    "batch_size": 32,
+    "sample_limit": 0,
+    "seed": 0,
+    "step_size_255": 1,
+    "restarts": 1,
+    "cw_steps": 100,
+    "cw_confidence": 0,
+    "deepfool_steps": 50,
+    "deepfool_candidates": 10
+  },
+  "dataset": {
+    "id": "cifar10-test",
+    "name": "CIFAR-10 官方测试集",
+    "kind": "cifar10",
+    "root": "./data/datasets",
+    "split": "test"
+  },
+  "models": [
+    {
+      "id": "cifar10-pgd-at",
+      "name": "CIFAR-10 / PGD-AT / ResNet-18",
+      "architecture": "cifar_resnet18",
+      "weights_path": "./data/training/cifar10-pgd/best_weights.pt",
+      "input_size": 32,
+      "num_classes": 10,
+      "mean": [0.4914, 0.4822, 0.4465],
+      "std": [0.2470, 0.2435, 0.2616],
+      "categories": ["airplane", "automobile", "bird", "cat", "deer", "dog", "frog", "horse", "ship", "truck"]
+    }
+  ]
+}

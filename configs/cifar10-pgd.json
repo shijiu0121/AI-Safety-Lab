@@ -1,0 +1,17 @@
+{
+  "dataset": "cifar10",
+  "data_dir": "./data/datasets",
+  "output_dir": "./data/training/cifar10-pgd",
+  "architecture": "cifar_resnet18",
+  "method": "pgd_at",
+  "epochs": 100,
+  "batch_size": 128,
+  "learning_rate": 0.1,
+  "epsilon_255": 8,
+  "attack_steps": 10,
+  "step_size_255": 2,
+  "validation_steps": 20,
+  "num_workers": 4,
+  "download": false,
+  "seed": 0
+}

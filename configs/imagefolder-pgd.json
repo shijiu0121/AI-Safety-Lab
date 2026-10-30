@@ -1,0 +1,19 @@
+{
+  "dataset": "imagefolder",
+  "data_dir": "./data/custom/train",
+  "validation_dir": "./data/custom/validation",
+  "architecture": "resnet18",
+  "input_size": 224,
+  "mean": [
+    0.485,
+    0.456,
+    0.406
+  ],
+  "std": [
+    0.229,
+    0.224,
+    0.225
+  ],
+  "batch_size": 32,
+  "output_dir": "./data/training/custom-pgd"
+}

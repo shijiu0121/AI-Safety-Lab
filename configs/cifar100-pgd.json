@@ -1,0 +1,6 @@
+{
+  "dataset": "cifar100",
+  "method": "pgd_at",
+  "architecture": "cifar_resnet18",
+  "output_dir": "./data/training/cifar100-pgd"
+}

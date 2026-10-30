@@ -1,0 +1,17 @@
+{
+  "name": "aegis-v0.4",
+  "datasets": ["cifar10", "cifar100"],
+  "architectures": ["cifar_resnet18", "densenet121", "mobilenet_v2"],
+  "seeds": [0],
+  "data_dir": "data/datasets",
+  "output_dir": "data/experiments-v04",
+  "training": {"epochs": 100, "batch_size": 128, "num_workers": 4, "attack_steps": 10, "epsilon_255": 8, "step_size_255": 2},
+  "main_methods": ["erm", "pgd_at", "trades"],
+  "distillation_architectures": ["cifar_resnet18"],
+  "long_tail": {"architectures": ["cifar_resnet18"], "imbalance_ratios": [10, 100], "methods": ["erm", "pgd_at", "trades", "at_bsl", "taet"]},
+  "evaluation": {"batch_size": 64, "sample_limit": 0, "budgets_255": [2, 4, 8], "attacks": ["fgsm", "pgd20", "pgd100", "cw_linf", "deepfool_linf", "autoattack"], "autoattack_budgets_255": [8], "step_size_255": 2, "restarts": 1},
+  "detection": {"architectures": ["cifar_resnet18"], "training_methods": ["erm", "pgd_at"], "methods": ["confidence", "entropy", "consistency", "feature_squeezing", "mahalanobis", "layer_regression"], "fit_samples": 5000, "false_positive_rate": 0.05, "lr_epochs": 10, "lr_hidden_dim": 256, "adaptive_steps": 100},
+  "preprocessing": ["bit_depth", "median", "gaussian", "resize_pad", "noise"],
+  "ensembles": ["soft_vote", "logit_mean", "hard_vote", "random_member"],
+  "anomaly": {"methods": ["input_statistics", "energy", "mahalanobis"], "ood": "cross_cifar", "corruptions": ["noise", "gaussian", "brightness"], "window_size": 128}
+}
